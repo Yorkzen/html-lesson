@@ -1,9 +1,11 @@
+/**************************************************************/
+/* General Stylings */
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
-* {
+html {
   font-family: "Source Code Pro", monospace;
 }
 h1,
@@ -17,7 +19,11 @@ h6 {
 body {
   margin: 0px;
 }
-
+::selection {
+  background-color: lavender;
+}
+/**************************************************************/
+/* Specific Stylings */
 .header {
   padding: 48px 16px;
   text-align: center;
@@ -52,9 +58,7 @@ body {
 .main > *:first-child {
   border-top: none;
 }
-::selection {
-  background-color: lavender;
-}
+
 .profession::after {
   content: "🦌";
 }
