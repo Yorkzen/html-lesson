@@ -23,8 +23,32 @@ body {
   text-align: center;
   background-color: lavender;
 }
+.nav-link {
+  padding: 6px 12px;
+  color: black;
+}
+.nav-link:hover {
+  color: lightblue;
+  background-color: gray;
+}
+.nav-link:active {
+  color: blue;
+  background-color: darkgray;
+}
+.nav-link + .nav-link {
+  margin-left: 12px;
+}
 .main {
   max-width: 800px;
-  margin: 0;
+  margin: 0 auto;
   padding: 16px;
+}
+.main > * {
+  border-top: 1px solid lightblue;
+}
+.main > * {
+  border-top: 1px solid lightgray;
+}
+.main > *:first-child {
+  border-top: none;
 }
