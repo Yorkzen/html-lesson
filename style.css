@@ -7,6 +7,7 @@
 }
 html {
   font-family: "Source Code Pro", monospace;
+  font-size: 16px;
 }
 h1,
 h2,
@@ -25,14 +26,20 @@ body {
 /**************************************************************/
 /* Specific Stylings */
 .header {
-  padding: 48px 16px;
-  padding-top: 72px;
+  padding: 3rem 1rem;
+  padding-top: 4.5rem;
   text-align: center;
   background-color: lavender;
   position: relative;
 }
+.heading-group {
+  font-size: 4rem;
+}
+.main-heading {
+  font-size: 1em;
+}
 .nav-link {
-  padding: 6px 12px;
+  padding: 0.25rem 0.5rem;
   color: black;
 }
 .nav-link:hover {
@@ -44,18 +51,19 @@ body {
   background-color: darkgray;
 }
 .nav-link + .nav-link {
-  margin-left: 12px;
+  margin-left: 0.75rem;
 }
 .main {
-  max-width: 800px;
+  max-width: 60ch;
   margin: 0 auto;
-  padding: 16px;
+  padding: 1rem;
 }
 .main > * {
-  border-top: 1px solid lightblue;
+  border-top: 0.125rem solid lightblue;
+  padding: 0 1rem;
 }
 .main > * + * {
-  margin-top: 48px;
+  margin-top: 3rem;
 }
 .main > *:first-child {
   border-top: none;
@@ -66,7 +74,7 @@ body {
 }
 .article-heading {
   position: relative;
-  left: -16px;
+  left: -1rem;
 }
 .experience-heading {
   display: inline-block;
@@ -76,10 +84,10 @@ body {
 }
 .hire-me {
   position: absolute;
-  right: 16px;
-  top: 16px;
-  padding: 8px;
-  border-radius: 4px;
+  right: 1rem;
+  top: 1rem;
+  padding: 0, 5rem;
+  border-radius: 0.25rem;
   background: violet;
   color: black;
 }
