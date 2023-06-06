@@ -26,8 +26,10 @@ body {
 /* Specific Stylings */
 .header {
   padding: 48px 16px;
+  padding-top: 72px;
   text-align: center;
   background-color: lavender;
+  position: relative;
 }
 .nav-link {
   padding: 6px 12px;
@@ -52,8 +54,8 @@ body {
 .main > * {
   border-top: 1px solid lightblue;
 }
-.main > * {
-  border-top: 1px solid lightgray;
+.main > * + * {
+  margin-top: 48px;
 }
 .main > *:first-child {
   border-top: none;
@@ -62,9 +64,22 @@ body {
 .profession::after {
   content: "🦌";
 }
+.article-heading {
+  position: relative;
+  left: -16px;
+}
 .experience-heading {
   display: inline-block;
 }
 .experience-subheading {
   display: inline-block;
+}
+.hire-me {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  background: violet;
+  color: black;
 }
