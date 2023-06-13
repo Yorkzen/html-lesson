@@ -50,8 +50,10 @@ body {
   color: blue;
   background-color: darkgray;
 }
-.nav-link + .nav-link {
-  margin-left: 0.75rem;
+@media screen and (min-width: 768px) {
+  .nav-link + .nav-link {
+    margin-left: 1rem;
+  }
 }
 .main {
   max-width: 60ch;
@@ -76,11 +78,10 @@ body {
   position: relative;
   left: -1rem;
 }
-.experience-heading {
-  display: inline-block;
-}
-.experience-subheading {
-  display: inline-block;
+
+.experience-header {
+  display: flex;
+  flex-direction: column;
 }
 .hire-me {
   position: absolute;
@@ -122,4 +123,28 @@ body {
   .main > * + * {
     margin-top: 5rem;
   }
+}
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .experience-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+}
+.experience-header {
+  display: flex;
+  flex-direction: column;
 }
