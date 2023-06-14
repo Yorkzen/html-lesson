@@ -60,6 +60,7 @@ a:active {
 .nav-link {
   padding: 0.25rem 0.5rem;
   color: var(--accent-text-color);
+  transition: background-color 0.25s ease-in-out;
 }
 .nav-link:hover {
   background-color: var(--accent-color);
@@ -72,6 +73,11 @@ a:active {
 
 .nav-link:visited {
   color: var(--accent-text-color);
+}
+.nav-link:focus {
+  background-color: var(--accent-color);
+  outline-color: var(--accent-text-color);
+  outline-style: dotted;
 }
 @media screen and (min-width: 768px) {
   .nav-link + .nav-link {
@@ -112,8 +118,17 @@ a:active {
   top: 1rem;
   padding: 0, 5rem;
   border-radius: 0.25rem;
-  background: violet;
+  opacity: 0.5;
+  background: var(--accent-color);
   color: black;
+  transform-origin: top right;
+  transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.5);
 }
 @media screen and (min-width: 768px) {
   html {
