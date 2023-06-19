@@ -89,7 +89,7 @@ a:active {
   margin: 0 auto;
   padding: 1rem;
 }
-.main > * {
+.main-article {
   border-top: 0.125rem solid var(--accent-color);
   padding: 0 1rem;
 }
@@ -103,7 +103,7 @@ a:active {
 .profession::after {
   content: "🦌";
 }
-.article-heading {
+.main-article-heading {
   position: relative;
   left: -1rem;
 }
@@ -120,7 +120,6 @@ a:active {
   border-radius: 0.25rem;
   opacity: 0.5;
   background: var(--accent-color);
-  color: black;
   transform-origin: top right;
   transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
 }
@@ -146,6 +145,11 @@ a:active {
     position: fixed;
   }
 }
+@media screen and (min-width: 768px) {
+  .main {
+    max-width: 80ch;
+  }
+}
 
 @media print {
   .hire-me {
@@ -159,7 +163,7 @@ a:active {
 
 @media screen and (min-width: 768px) {
   .main > * + * {
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
 }
 .navigation {
@@ -205,5 +209,19 @@ a:active {
   .footer-link:active,
   .footer-link:visited {
     color: var(--accent-text-color);
+  }
+}
+.main > *:first-child {
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-article {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+  }
+
+  .main-article-content {
+    margin-top: 4rem;
   }
 }
